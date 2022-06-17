@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route, Link } from 'react-router-dom';
 import {Layout, Typography, Space} from 'antd';
-import {Navbar} from './components';
+import {Navbar, Homepage, Exchanges, CryptoDetails, Cryptocurrencies, News} from './components';
 
 const App = () => {
     return (
@@ -28,13 +28,21 @@ const App = () => {
                             <Route exact path="/news">
                                 <News />
                             </Route>
-
                         </Switch>
                     </div>
                 </Layout>
-            </div>
+            
             <div className="footer">
-
+                <Typography.Title level={5} style={{color : 'white', textAlign: 'center'}}>
+                    CryptoDev <br/>
+                    All rights reserverd
+                </Typography.Title>
+                <Space>
+                    <Link to="/">Home</Link>
+                    <Link to="/exchanges">Exchanges</Link>
+                    <Link to="/news">News</Link>
+                </Space>
+            </div>
             </div>
         </div>
     );
